@@ -23,3 +23,4 @@ on copyMarkdownLinks()
 	set the clipboard to theLink
 end copyMarkdownLinks
 
+

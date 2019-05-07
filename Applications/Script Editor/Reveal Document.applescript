@@ -21,3 +21,4 @@ on revealDocument()
 		activate
 	end tell
 end revealDocument
+

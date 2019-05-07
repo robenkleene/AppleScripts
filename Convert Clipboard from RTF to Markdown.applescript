@@ -13,3 +13,4 @@ on convertToMarkdown()
 	set theMarkdown to do shell script "echo " & the quoted form of theHTML & "| /usr/local/bin/pandoc -f html-native_divs-native_spans -t markdown --wrap=none"
 	set the clipboard to theMarkdown
 end convertToMarkdown
+

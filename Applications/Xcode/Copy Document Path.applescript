@@ -15,3 +15,4 @@ on copyDocumentPathToClipboard()
 		set the clipboard to thePath
 	end tell
 end copyDocumentPathToClipboard
+

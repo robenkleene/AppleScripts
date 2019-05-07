@@ -32,3 +32,4 @@ on getThePath()
 	end try
 	return theFolderPath
 end getThePath
+

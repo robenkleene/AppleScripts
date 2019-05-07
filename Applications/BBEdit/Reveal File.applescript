@@ -18,3 +18,4 @@ on revealFrontMostFile()
 		reveal theFile
 	end tell
 end revealFrontMostFile
+

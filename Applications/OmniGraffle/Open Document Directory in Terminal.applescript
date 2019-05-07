@@ -25,3 +25,4 @@ on getThePath()
 	set theDirectoryPath to do shell script "dirname " & thePath
 	return theDirectoryPath
 end getThePath
+

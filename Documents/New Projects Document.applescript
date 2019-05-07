@@ -14,3 +14,4 @@ on makeNewDocument()
 	set theFilePath to do shell script "~/.bin/markdown_new_file " & the quoted form of theTitle & " ~/Documents/Text/Projects/"
 	do shell script "open " & the quoted form of theFilePath
 end makeNewDocument
+

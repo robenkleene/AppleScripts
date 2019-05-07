@@ -13,3 +13,4 @@ on makeNewPost()
 	set theFilePath to do shell script "~/.bin/jekyll_new_draft -t " & the quoted form of theTitle
 	do shell script "open " & the quoted form of theFilePath
 end makeNewPost
+

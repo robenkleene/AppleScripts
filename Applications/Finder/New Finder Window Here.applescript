@@ -5,3 +5,4 @@ try
 on error eStr number eNum
 	do shell script "open ~/Desktop/"
 end try
+

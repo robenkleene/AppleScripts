@@ -30,3 +30,4 @@ on copyMarkdownLinks()
 	set the clipboard to theResult
 end copyMarkdownLinks
 
+

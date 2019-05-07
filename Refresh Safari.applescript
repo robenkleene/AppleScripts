@@ -5,3 +5,4 @@ if application "Safari" is running then
 	end tell
 end if
 
+

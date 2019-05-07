@@ -26,3 +26,4 @@ on makeNewPost()
 	set theFilePath to do shell script "echo " & the quoted form of theLink & " | ~/.bin/jekyll_new_draft -l -t " & the quoted form of theTitle
 	do shell script "open " & the quoted form of theFilePath
 end makeNewPost
+

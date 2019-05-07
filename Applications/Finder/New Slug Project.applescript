@@ -16,3 +16,4 @@ on makeNewProject()
 		set theFilePath to do shell script "~/.bin/slug_project " & the quoted form of theTitle & " " & thePath
 	end tell
 end makeNewProject
+

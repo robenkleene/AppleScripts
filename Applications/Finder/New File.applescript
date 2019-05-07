@@ -23,3 +23,4 @@ on makeNewFile()
 		reveal theNewFilePath
 	end tell
 end makeNewFile
+

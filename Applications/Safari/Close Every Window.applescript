@@ -3,3 +3,4 @@ if application "Safari Technology Preview" is frontmost then
 else
 	tell application "Safari" to close every window
 end if
+

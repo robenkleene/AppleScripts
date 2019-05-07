@@ -20,3 +20,4 @@ on openSourceInTextMate()
 	end if
 	do shell script "echo " & the quoted form of theSource & " | " & theCommand
 end openSourceInTextMate
+

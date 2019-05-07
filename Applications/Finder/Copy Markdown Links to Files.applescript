@@ -35,3 +35,4 @@ on copyMarkdownLinksToFiles()
 	end tell
 end copyMarkdownLinksToFiles
 
+

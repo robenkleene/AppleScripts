@@ -17,3 +17,4 @@ on dimissAllNotifications()
 		end tell
 	end tell
 end dimissAllNotifications
+

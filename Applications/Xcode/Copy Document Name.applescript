@@ -15,3 +15,4 @@ on copyDocumentNameToClipboard()
 		set the clipboard to theFileName
 	end tell
 end copyDocumentNameToClipboard
+

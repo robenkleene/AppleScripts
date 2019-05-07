@@ -31,3 +31,4 @@ on makeNewPost()
 	set theFilePath to do shell script "echo " & the quoted form of theLink & " | ~/.bin/markdown_new_inbox " & the quoted form of theTitle
 	do shell script "open " & the quoted form of theFilePath
 end makeNewPost
+

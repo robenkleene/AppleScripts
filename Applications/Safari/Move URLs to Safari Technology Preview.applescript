@@ -36,3 +36,4 @@ on openURLsInSTP()
 		end tell
 	end if
 end openURLsInSTP
+

@@ -6,3 +6,4 @@ on openPlayground()
 	set theCommand to "open " & quoted form of thePOSIXPath
 	do shell script theCommand
 end openPlayground
+

@@ -34,3 +34,4 @@ on getThePaths()
 		set the clipboard to thePaths
 	end tell
 end getThePaths
+

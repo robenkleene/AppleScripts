@@ -18,3 +18,4 @@ on deletePreviousWord()
 		end tell
 	end tell
 end deletePreviousWord
+

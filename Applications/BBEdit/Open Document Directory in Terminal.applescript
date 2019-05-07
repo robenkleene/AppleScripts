@@ -24,3 +24,4 @@ on getThePath()
 	set thePath to do shell script "dirname " & theFilePath
 	return thePath
 end getThePath
+

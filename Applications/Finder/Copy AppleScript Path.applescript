@@ -5,3 +5,4 @@ try
 on error
 	set the clipboard to (path to desktop) as text
 end try
+

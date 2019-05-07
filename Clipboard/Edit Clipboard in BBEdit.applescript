@@ -6,3 +6,4 @@
 
 set theCommand to "/usr/local/bin/bbedit"
 do shell script "pbpaste | " & theCommand
+
