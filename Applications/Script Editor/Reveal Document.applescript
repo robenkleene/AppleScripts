@@ -10,7 +10,6 @@ end try
 on revealDocument()
 	tell application "Script Editor"
 		set theDocument to document 1
-		theDocument
 		set thePath to theDocument's path
 	end tell
 	set theFile to POSIX file thePath
