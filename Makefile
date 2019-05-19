@@ -32,4 +32,4 @@ decompile:
 
 remove_trailing_lines:
 	git ls-files "*.applescript" -z |\
-		xargs -0 sed -i '' -e :a -e '/^\n*$$/{$$d;N;ba' -e '}'
+		xargs -n 1 -0 sed -i '' -e :a -e '/^\n*$$/{$$d;N;ba' -e '}'
