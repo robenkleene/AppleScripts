@@ -30,4 +30,3 @@ on copyDocumentPathToClipboard()
 		set the clipboard to theResult
 	end tell
 end copyDocumentPathToClipboard
-

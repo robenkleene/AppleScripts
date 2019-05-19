@@ -24,4 +24,3 @@ on getMessageSource()
 		make new text document with properties {contents:theResult}
 	end tell
 end getMessageSource
-

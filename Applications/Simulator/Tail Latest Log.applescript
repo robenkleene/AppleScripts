@@ -13,4 +13,3 @@ on tailLatestLog()
 		do script "tail -f " & the quoted form of theLogPath
 	end tell
 end tailLatestLog
-

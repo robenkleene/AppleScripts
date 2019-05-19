@@ -11,4 +11,3 @@ on typeClipboard()
 	set theClipboard to the clipboard as text
 	tell application "System Events" to keystroke theClipboard
 end typeClipboard
-

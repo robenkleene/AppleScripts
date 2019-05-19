@@ -15,4 +15,3 @@ on openDataFolder()
 	end if
 	do shell script "open " & thePath
 end openDataFolder
-

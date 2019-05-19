@@ -29,5 +29,3 @@ on copyURLsToFiles()
 		set the clipboard to theURLs
 	end tell
 end copyURLsToFiles
-
-

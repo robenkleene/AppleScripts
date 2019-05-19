@@ -30,4 +30,3 @@ on copyAsMarkdown()
 		end tell
 	end tell
 end copyAsMarkdown
-

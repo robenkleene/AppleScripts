@@ -29,5 +29,3 @@ on copyMarkdownLinks()
 	end repeat
 	set the clipboard to theResult
 end copyMarkdownLinks
-
-

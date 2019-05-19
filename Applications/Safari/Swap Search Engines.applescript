@@ -47,4 +47,3 @@ on replaceText(find, replace, subject)
 	set text item delimiters of AppleScript to prevTIDs
 	return subject
 end replaceText
-

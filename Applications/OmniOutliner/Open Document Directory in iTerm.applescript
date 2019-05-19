@@ -30,4 +30,3 @@ on getThePath()
 	set thePath to quoted form of theFile's POSIX path
 	set theDirectoryPath to do shell script "dirname " & thePath
 end getThePath
-

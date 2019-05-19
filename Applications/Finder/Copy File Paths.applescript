@@ -28,5 +28,3 @@ on copyFilePaths()
 		set the clipboard to thePaths
 	end tell
 end copyFilePaths
-
-

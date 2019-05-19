@@ -4,5 +4,3 @@ if application "Safari" is running then
 		set URL of current tab of front window to sameURL
 	end tell
 end if
-
-

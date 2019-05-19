@@ -14,6 +14,3 @@ on makeNewDocument()
 	set theFilePath to do shell script "~/.bin/markdown_new_file " & the quoted form of theTitle & " ~/Dropbox/Work/Dow\\ Jones/Text/Projects/"
 	do shell script "open " & the quoted form of theFilePath
 end makeNewDocument
-
-
-

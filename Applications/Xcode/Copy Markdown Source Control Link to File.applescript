@@ -31,4 +31,3 @@ on copyDocumentPathToClipboard()
 		set the clipboard to theURL
 	end tell
 end copyDocumentPathToClipboard
-

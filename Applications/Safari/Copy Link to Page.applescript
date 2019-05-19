@@ -7,4 +7,3 @@ else
 		set the clipboard to the URL of front document as string
 	end tell
 end if
-

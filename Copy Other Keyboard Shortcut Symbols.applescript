@@ -1,2 +1,1 @@
 set the clipboard to "⌤↓↑←→⎋⌦⌫↩⇥⇤"
-

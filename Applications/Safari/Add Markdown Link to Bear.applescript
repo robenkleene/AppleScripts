@@ -22,6 +22,3 @@ on processMarkdownLinks()
 	set theLink to "[" & theTitle & "]" & "(" & theURL & ")"
 	open "'bear://x-callback-url/add-text?title=Scratch&text='" & the quoted form of theLink
 end processMarkdownLinks
-
-
-

@@ -17,4 +17,3 @@ on openDocumentInDefaultApplication()
 		open theFile
 	end tell
 end openDocumentInDefaultApplication
-

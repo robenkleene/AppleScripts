@@ -44,4 +44,3 @@ on openRelativeFilePath()
 		end if
 	end if
 end openRelativeFilePath
-

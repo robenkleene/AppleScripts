@@ -23,4 +23,3 @@ on openDataFolder()
 		end tell
 	end tell
 end openDataFolder
-

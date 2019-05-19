@@ -28,4 +28,3 @@ on getThePath()
 	return theFolderPath
 	
 end getThePath
-

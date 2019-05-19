@@ -23,5 +23,3 @@ on copyMarkdownLinks()
 	set theLink to "[id]: " & theURL & " \"" & theTitle & "\""
 	set the clipboard to theLink
 end copyMarkdownLinks
-
-

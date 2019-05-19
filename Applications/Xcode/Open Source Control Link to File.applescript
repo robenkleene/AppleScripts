@@ -32,4 +32,3 @@ on copyDocumentPathToClipboard()
 		end tell
 	end tell
 end copyDocumentPathToClipboard
-

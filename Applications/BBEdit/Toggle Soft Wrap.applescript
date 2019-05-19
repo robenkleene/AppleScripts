@@ -12,4 +12,3 @@ tell application "BBEdit"
 		end if
 	end tell
 end tell
-

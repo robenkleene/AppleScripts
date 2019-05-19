@@ -13,4 +13,3 @@ on copyWindowNameToClipboard()
 		set the clipboard to theName
 	end tell
 end copyWindowNameToClipboard
-

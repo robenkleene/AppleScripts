@@ -34,5 +34,3 @@ on copyMarkdownLinksToFiles()
 		set the clipboard to theLinks
 	end tell
 end copyMarkdownLinksToFiles
-
-

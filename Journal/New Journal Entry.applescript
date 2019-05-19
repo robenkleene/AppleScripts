@@ -11,4 +11,3 @@ on makeNewPost()
 	set theFilePath to do shell script "~/.bin/journal_new_make ~/Dropbox/Text/Journal"
 	do shell script "open " & the quoted form of theFilePath
 end makeNewPost
-

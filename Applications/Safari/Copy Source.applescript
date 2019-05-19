@@ -18,4 +18,3 @@ on getSource()
 		end tell
 	end if
 end getSource
-

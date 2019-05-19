@@ -20,5 +20,3 @@ on revealXcodeDocument()
 		end tell
 	end tell
 end revealXcodeDocument
-
-

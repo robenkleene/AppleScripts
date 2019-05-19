@@ -22,5 +22,3 @@ on copyMarkdownLinks()
 	set theLink to "[" & theTitle & "]" & "(" & theURL & ")"
 	set the clipboard to theLink
 end copyMarkdownLinks
-
-

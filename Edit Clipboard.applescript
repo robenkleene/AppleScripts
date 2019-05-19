@@ -12,4 +12,3 @@ on editClipboard()
 	set theResult to text returned of theDialog
 	set the clipboard to the result
 end editClipboard
-

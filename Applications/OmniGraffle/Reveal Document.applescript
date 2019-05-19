@@ -20,4 +20,3 @@ on revealDocument()
 		end tell
 	end tell
 end revealDocument
-
