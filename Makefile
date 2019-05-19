@@ -29,3 +29,7 @@ decompile:
 	mkdir -p "$$directory" && \
 	osadecompile "$$file" > "$$destination"; \
 	done
+
+remove_trailing_lines:
+	git ls-files "*.applescript" -z |\
+		xargs -0 sed -i '' -e :a -e '/^\n*$/{$d;N;};/\n$/ba'
