@@ -19,6 +19,7 @@ on processMarkdownLinks()
 			set theURL to URL of front document as string
 		end tell
 	end if
-	set theLink to "- [" & theTitle & "]" & "(" & theURL & ")"
-	do shell script "echo " & the quoted form of theLink & " >> \"$HOME/Documents/Text/Scripts/Scratch.md\""
+	set theLink to "
+- [" & theTitle & "]" & "(" & theURL & ")"
+	do shell script "/bin/echo -n " & the quoted form of theLink & " >> \"$HOME/Documents/Text/Scripts/Scratch.md\""
 end processMarkdownLinks
