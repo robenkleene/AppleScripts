@@ -16,16 +16,26 @@ on copyAsMarkdown()
 			set the clipboard to ""
 			repeat with theTree in theSelectedTrees
 				set theTitle to name of theTree
-				set the clipboard to (the clipboard) & "# " & theTitle
 				set theNote to note of theTree
+				if theNote starts with "http" then
+					set theURL to the first paragraph of theNote
+					set theNote to rest of the theNote's paragraphs
+				end if
+				if (count of theURL) is greater than 0 then
+					set the clipboard to (the clipboard) & "- [" & theTitle & "](" & theURL & ")"
+				else
+					set the clipboard to (the clipboard) & "- " & theTitle
+				end if
 				if (count of theNote) is greater than 0 then
 					set the clipboard to (the clipboard) & "
 
-" & theNote
-				end if
-				set the clipboard to (the clipboard) & "
-
+	" & theNote & "
+	
 "
+				else
+					set the clipboard to (the clipboard) & "
+"
+				end if
 			end repeat
 		end tell
 	end tell
