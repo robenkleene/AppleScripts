@@ -17,6 +17,7 @@ on copyAsMarkdown()
 			repeat with theTree in theSelectedTrees
 				set theTitle to name of theTree
 				set theNote to note of theTree
+				set theURL to ""
 				if theNote starts with "http" then
 					set theURL to the first paragraph of theNote
 					set theNote to rest of the theNote's paragraphs
