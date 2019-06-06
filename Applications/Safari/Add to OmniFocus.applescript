@@ -19,7 +19,11 @@ on processMarkdownLinks()
 			set theURL to URL of front document as string
 		end tell
 	end if
-	tell front document of application "OmniFocus"
-		make new inbox task with properties {name:theTitle, note:theURL}
+	tell application "OmniFocus"
+		tell quick entry
+			open
+			make new inbox task with properties {name:theTitle, note:theURL}
+			activate
+		end tell
 	end tell
 end processMarkdownLinks
