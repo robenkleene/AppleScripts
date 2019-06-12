@@ -14,8 +14,6 @@ on revealDocument()
 	end tell
 	set theFile to POSIX file thePath
 	tell application "Finder"
-		set theContainer to container of (theFile as alias)
-		make new Finder window to theContainer
 		reveal theFile
 		activate
 	end tell

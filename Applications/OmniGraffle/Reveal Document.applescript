@@ -12,11 +12,9 @@ on revealDocument()
 		set theDocument to document 1
 		set thePath to the path of theDocument
 		set theFile to ((thePath as text) as POSIX file)
-		tell application "Finder"
-			activate
-			set theContainer to container of (theFile as alias)
-			make new Finder window to theContainer
-			reveal theFile
-		end tell
+	end tell
+	tell application "Finder"
+		reveal theFile
+		activate
 	end tell
 end revealDocument

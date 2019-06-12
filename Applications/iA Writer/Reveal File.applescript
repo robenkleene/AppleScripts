@@ -12,9 +12,7 @@ on revealFrontMostFile()
 		set theFile to file of document 1
 	end tell
 	tell application "Finder"
-		activate
-		set theContainer to container of (theFile as alias)
-		make new Finder window to theContainer
 		reveal theFile
+		activate
 	end tell
 end revealFrontMostFile
