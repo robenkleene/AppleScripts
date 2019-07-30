@@ -1,5 +1,5 @@
 try
-	processMarkdownLinks()
+	makeTodos()
 on error errMsg number errNum
 	if errNum is not equal to -128 then
 		display dialog "AppleScript encountered an error." & ¬
@@ -7,7 +7,7 @@ on error errMsg number errNum
 	end if
 end try
 
-on processMarkdownLinks()
+on makeTodos()
 	if application "Safari Technology Preview" is frontmost then
 		tell application "Safari Technology Preview"
 			set theTitle to name of front document as string
@@ -26,4 +26,4 @@ on processMarkdownLinks()
 			activate
 		end tell
 	end tell
-end processMarkdownLinks
+end makeTodos
