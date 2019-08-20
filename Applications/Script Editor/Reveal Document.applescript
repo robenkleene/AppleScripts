@@ -10,7 +10,7 @@ end try
 on revealDocument()
 	tell application "Script Editor"
 		set theDocument to document 1
-		set thePath to theDocument's path
+		set thePath to theDocument's «class ppth»
 	end tell
 	set theFile to POSIX file thePath
 	tell application "Finder"
