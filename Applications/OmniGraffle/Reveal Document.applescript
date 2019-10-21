@@ -10,7 +10,7 @@ end try
 on revealDocument()
 	tell application "OmniGraffle"
 		set theDocument to document 1
-		set thePath to the «class ppth» of theDocument
+		set thePath to the path of theDocument
 		set theFile to ((thePath as text) as POSIX file)
 	end tell
 	tell application "Finder"
