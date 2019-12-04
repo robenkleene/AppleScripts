@@ -27,6 +27,7 @@ on makeNewPost()
 		set theURL to URL of front document as string
 		set theLink to "[" & theTitle & "]" & "(" & theURL & ")"
 	end tell
+	activate -- This prevents a beep when scripts are run from LaunchBar but it also makes the script run slower from the Script Menu
 	set theDialog to display dialog "Title" default answer "" with title "New Jekyll Draft"
 	set theTitle to text returned of theDialog
 	set theFilePath to do shell script "echo " & the quoted form of theLink & " | ~/.bin/markdown_new_inbox " & the quoted form of theTitle

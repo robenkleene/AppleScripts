@@ -9,6 +9,7 @@ on error errMsg number errNum
 end try
 
 on makeNewPost()
+	activate -- This prevents a beep when scripts are run from LaunchBar but it also makes the script run slower from the Script Menu
 	set theDialog to display dialog "Title" default answer "" with title "New Jekyll Draft"
 	set theTitle to text returned of theDialog
 	set theFilePath to do shell script "~/.bin/jekyll_new_draft -l -t " & the quoted form of theTitle
