@@ -2,6 +2,7 @@ try
 	copyDocumentPathToClipboard()
 on error errMsg number errNum
 	if errNum is not equal to -128 then
+		activate -- This prevents a beep when scripts are run from LaunchBar but it also makes the script run slower from the Script Menu
 		display dialog "AppleScript encountered an error." & ¬
 			" Error Message: " & errMsg & " Number " & errNum
 	end if
@@ -16,7 +17,6 @@ on copyDocumentPathToClipboard()
 		set theStart to item 1 of theSelectedCharacterRange
 		set theEnd to item 2 of theSelectedCharacterRange
 		set thePath to the path of theDocument
-		-- display dialog "got here " & theEnd & "the start " & theStart
 		if the theEnd - theStart is greater than 1 then
 			set theLineStart to item 1 of theSelectedParagraphRange
 			set theLineEnd to item 2 of theSelectedParagraphRange
