@@ -8,7 +8,10 @@ on error errMsg number errNum
 end try
 
 on makeNewDocument()
-	set theDialog to display dialog "Title" default answer "" with title "New Inbox Document"
+	tell me
+		activate
+		set theDialog to display dialog "Title" default answer "" with title "New Inbox Document"
+	end tell
 	set theTitle to text returned of theDialog
 	
 	set theFilePath to do shell script "~/.bin/markdown_new_file " & the quoted form of theTitle & " ~/Documents/Text/Inbox/"
