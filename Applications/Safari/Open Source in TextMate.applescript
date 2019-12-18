@@ -19,5 +19,9 @@ on openSourceInTextMate()
 			set theSource to source of document 1
 		end tell
 	end if
-	do shell script "echo " & the quoted form of theSource & " | " & theCommand
+	-- do shell script "echo " & the quoted form of theSource & " | " & theCommand
+	set theOldClipboard to the clipboard
+	set the clipboard to theSource
+	do shell script "/usr/bin/pbpaste" & " | " & theCommand
+	set the clipboard to theOldClipboard
 end openSourceInTextMate
