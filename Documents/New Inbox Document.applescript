@@ -13,6 +13,6 @@ on makeNewDocument()
 	set theDialog to display dialog "Title" default answer "" with title "New Inbox Document"
 	set theTitle to text returned of theDialog
 	
-	set theFilePath to do shell script "~/.bin/markdown_new_file " & the quoted form of theTitle & " ~/Documents/Text/Inbox/"
+	set theFilePath to do shell script "~/.bin/inbox_new " & the quoted form of theTitle
 	do shell script "open " & the quoted form of theFilePath
 end makeNewDocument

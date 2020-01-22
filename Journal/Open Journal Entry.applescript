@@ -9,6 +9,6 @@ on error errMsg number errNum
 end try
 
 on makeNewPost()
-	set theFilePath to do shell script "~/.bin/journal_new_make ~/Dropbox/Text/Journal"
+	set theFilePath to do shell script "~/.bin/journal_new_make_default"
 	do shell script "open " & the quoted form of theFilePath
 end makeNewPost
