@@ -1,1 +1,1 @@
-do shell script "open ~/Dropbox/Text/Journal"
+do shell script "open ~/Documents/Text/Journal/"
