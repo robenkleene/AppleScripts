@@ -18,6 +18,7 @@ on openURLInBrave()
 		end tell
 	end if
 	tell application "Brave Browser"
+		make new window
 		open location theURL
 		activate
 	end tell
