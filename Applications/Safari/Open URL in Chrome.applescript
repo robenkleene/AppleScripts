@@ -17,7 +17,7 @@ on openURLInBrave()
 			set theURL to URL of current tab of window 1
 		end tell
 	end if
-	tell application "Brave Browser"
+	tell application "Google Chrome"
 		make new window
 		open location theURL
 		activate
