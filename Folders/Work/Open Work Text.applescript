@@ -1,1 +1,1 @@
-do shell script "open ~/Dropbox/Work/Dow\\ Jones/Text/"
+do shell script "open ~/Dropbox/Work/Text/"
