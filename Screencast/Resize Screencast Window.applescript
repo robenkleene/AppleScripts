@@ -12,8 +12,8 @@ on doIt()
 	tell application "System Events"
 		set theFrontmostProcess to first process where it is frontmost
 		set theWindow to window 1 of theFrontmostProcess
-		set theWindowWidth to 600
-		set theWindowHeight to 600
+		set theWindowWidth to 800
+		set theWindowHeight to 800
 		tell application "Finder" to set theScreenSize to bounds of window of desktop
 		set theScreenWidth to item 3 of theScreenSize
 		set theScreenHeight to item 4 of theScreenSize
