@@ -27,9 +27,6 @@ on copyDocumentPathToClipboard()
 		else
 			set theURL to do shell script "~/.bin/link_source_control_markdown --url-only " & the quoted form of thePath
 		end if
-		tell application "Safari"
-			activate
-			open location theURL
-		end tell
+		do shell script "open " & the quoted form of the theURL
 	end tell
 end copyDocumentPathToClipboard
