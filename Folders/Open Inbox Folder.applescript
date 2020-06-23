@@ -1,1 +1,1 @@
-do shell script "open ~/Documents/Text/Inbox/"
+do shell script "open ~/Documents/Text/Notes/Inbox/"
