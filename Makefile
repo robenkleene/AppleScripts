@@ -1,11 +1,18 @@
-.PHONY: install compile decompile
+.PHONY: install compile decompile setup
 
 SOURCE = $(shell pwd)
 SOURCE_EXT = applescript
 DESTINATION = ${HOME}/Library/Scripts
 DEST_EXT = scpt
 
-install: compile
+install: setup compile
+
+setup:
+	destination="$(DESTINATION)/Applications/Safari Technology Preview"; \
+	[ ! -e "$$destination" ] || exit 0; \
+	source="$(DESTINATION)/Applications/Safari"; \
+	mkdir -p "$$source"; \
+	ln -s "$$source" "$$destination"
 
 compile:
 	find . -type f -name '*.$(SOURCE_EXT)' -print0 |\
