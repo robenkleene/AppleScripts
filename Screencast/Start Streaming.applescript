@@ -4,4 +4,3 @@ tell application "Slack" to quit
 tell application "Calendar" to quit
 tell application "OmniFocus" to quit
 tell application "Reminders" to quit
-tell application "Safari Technology Preview" to quit
