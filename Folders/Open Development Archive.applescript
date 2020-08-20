@@ -1,1 +1,1 @@
-do shell script "open ~/Development/Archive/"
+do shell script "open ~/Developer/Archive/"

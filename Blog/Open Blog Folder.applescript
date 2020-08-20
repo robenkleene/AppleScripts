@@ -1,1 +1,1 @@
-do shell script "open ~/Development/Projects/Web/robenkleene.github.io"
+do shell script "open ~/Developer/Projects/Web/robenkleene.github.io"
