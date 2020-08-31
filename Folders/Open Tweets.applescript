@@ -1,1 +1,1 @@
-do shell script "open ~/Documents/Text/Writing/Tweets"
+do shell script "open ~/Documents/Text/Social/Tweets"
