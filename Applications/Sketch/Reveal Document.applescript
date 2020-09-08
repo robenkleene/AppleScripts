@@ -10,7 +10,7 @@ end try
 
 on revealDocument()
 	tell application "Sketch"
-		set thePath to path of document 1
+		set thePath to «class ppth» of document 1
 	end tell
 	tell application "Finder"
 		reveal POSIX file thePath as text
