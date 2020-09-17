@@ -15,7 +15,7 @@ setup:
 	ln -s "$$source" "$$destination"
 
 compile:
-	@echo find . -type f -name '*.$(SOURCE_EXT)' -print0 |\
+	@find . -type f -name '*.$(SOURCE_EXT)' -print0 |\
 		while IFS= read -r -d '' file; do \
 		file_no_ext="$${file%.*}"; \
 		name="$${file_no_ext##*/}"; \
@@ -26,7 +26,7 @@ compile:
 		done
 
 decompile:
-	@echo cd $(DESTINATION) && \
+	@cd $(DESTINATION) && \
 		find . -type f -name '*.$(DEST_EXT)' -print0 |\
 		while IFS= read -r -d '' file; do \
 		file_no_ext="$${file%.*}"; \
