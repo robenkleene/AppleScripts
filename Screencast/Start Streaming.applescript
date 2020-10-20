@@ -7,4 +7,10 @@ if application "Reminders" is running then tell application "Reminders" to quit
 
 tell application "Safari Technology Preview" to open location "https://www.twitch.tv/popout/robenkleene/chat?popout=popout_chat"
 tell application "OBS" to activate
-tell application "Music" to activate
+tell application "Music"
+	activate
+	pause 1
+	play (every track whose genre is "Web")
+	set shuffle enabled to true
+	next track
+end tell
