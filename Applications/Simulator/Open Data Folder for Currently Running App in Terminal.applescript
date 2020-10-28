@@ -19,7 +19,6 @@ on openDataFolder()
 			tell application "iTerm"
 				set theWindow to (create window with default profile)
 				tell theWindow
-					delay 0.5 -- Delay because of a bug, try removing later
 					tell current session of theWindow
 						write text "cd " & the quoted form of thePath
 						activate
