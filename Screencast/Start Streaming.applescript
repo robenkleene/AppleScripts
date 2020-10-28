@@ -9,7 +9,7 @@ tell application "Safari Technology Preview" to open location "https://www.twitc
 tell application "OBS" to activate
 tell application "Music"
 	activate
-	pause 1
+	pause 2
 	play (every track whose genre is "Web")
 	set shuffle enabled to true
 	next track
