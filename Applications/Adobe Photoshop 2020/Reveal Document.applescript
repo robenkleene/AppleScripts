@@ -9,7 +9,7 @@ on error errMsg number errNum
 end try
 
 on revealDocument()
-	tell application "Adobe Photoshop 2020"
+	tell application "Adobe Photoshop 2021"
 		set theFile to current document's file path
 	end tell
 	tell application "Finder"
