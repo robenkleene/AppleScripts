@@ -14,3 +14,4 @@ tell application "Music"
 	set shuffle enabled to true
 	next track
 end tell
+tell application "Finder" to set visible of process "Music" to false
