@@ -5,13 +5,21 @@ if application "Calendar" is running then tell application "Calendar" to quit
 if application "OmniFocus" is running then tell application "OmniFocus" to quit
 if application "Reminders" is running then tell application "Reminders" to quit
 
-tell application "Safari Technology Preview" to open location "https://www.twitch.tv/popout/robenkleene/chat?popout=popout_chat"
+set theURL to "https://www.twitch.tv/popout/robenkleene/chat?popout=popout_chat"
+tell application "System Events"
+	if application process "Safari Technology Preview" exists then
+		tell application "Safari Technology Preview"
+			open location theURL
+		end tell
+	else
+		tell application "Safari"
+			open location theURL
+		end tell
+	end if
+end tell
+
 tell application "OBS" to activate
 tell application "Music"
-	activate
-	pause 2
-	play (every track whose genre is "Web")
 	set shuffle enabled to true
-	next track
+	play (every track whose genre is "Web")
 end tell
-tell application "Finder" to set visible of process "Music" to false
