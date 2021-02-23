@@ -22,7 +22,7 @@ on openDataFolder()
 				activate
 			end tell
 		else if exists (processes where name is "iTerm2") then
-			tell application "iTerm2"
+			tell application "iTerm"
 				set theWindow to (create window with default profile)
 				tell theWindow
 					tell current session of theWindow

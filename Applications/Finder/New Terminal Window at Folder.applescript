@@ -11,7 +11,7 @@ end try
 on openInTerminal()
 	set thePath to my getThePath()
 	tell application "System Events"
-
+		
 		if exists (processes where name is "Terminal") then
 			tell application "Terminal"
 				set theWindow to do script ""
@@ -19,7 +19,7 @@ on openInTerminal()
 				activate
 			end tell
 		else if exists (processes where name is "iTerm2") then
-			tell application "iTerm2"
+			tell application "iTerm"
 				set theWindow to (create window with default profile)
 				tell theWindow
 					tell current session of theWindow

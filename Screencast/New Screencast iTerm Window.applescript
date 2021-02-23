@@ -1,4 +1,4 @@
-tell application "iTerm2"
+tell application "iTerm"
 	create window with profile "Screencast"
 	activate
 end tell
