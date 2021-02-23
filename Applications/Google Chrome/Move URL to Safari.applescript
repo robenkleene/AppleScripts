@@ -13,7 +13,7 @@ on openURLInSafari()
 		close active tab of window 1
 	end tell
 	tell application "System Events"
-		if application process "Safari Technology Preview" exists then
+		if exists (processes where name is "Safari Technology Preview") then
 			tell application "Safari Technology Preview"
 				open location theURL
 				activate

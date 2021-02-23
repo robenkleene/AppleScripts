@@ -11,14 +11,14 @@ end try
 on openInTerminal()
 	set thePath to my getThePath()
 	tell application "System Events"
-		if application process "Terminal" exists then
+		if exists (processes where name is "Terminal") then
 			tell application "Terminal"
 				set theWindow to do script ""
 				do script "cd " & quoted form of thePath in theWindow
 				activate
 			end tell
-		else if application process "iTerm2" exists then
-			tell application "iTerm"
+		else if exists (processes where name is "iTerm2") then
+			tell application "iTerm2"
 				set theWindow to (create window with default profile)
 				tell theWindow
 					tell current session of theWindow

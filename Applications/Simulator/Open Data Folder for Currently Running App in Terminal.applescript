@@ -15,14 +15,14 @@ on openDataFolder()
 		set thePath to do shell script "lsof -p " & theProcess & " | grep -oE \"/.*Library/Developer/CoreSimulator/Devices/[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}/\" | grep -v grep | awk '{ print $1 }' | head -n 1"
 	end if
 	tell application "System Events"
-		if application process "Terminal" exists then
+		if exists (processes where name is "Terminal") then
 			tell application "Terminal"
 				set theWindow to do script ""
 				do script "cd " & quoted form of thePath in theWindow
 				activate
 			end tell
-		else if application process "iTerm2" exists then
-			tell application "iTerm"
+		else if exists (processes where name is "iTerm2") then
+			tell application "iTerm2"
 				set theWindow to (create window with default profile)
 				tell theWindow
 					tell current session of theWindow

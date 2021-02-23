@@ -7,7 +7,7 @@ if application "Reminders" is running then tell application "Reminders" to quit
 
 set theURL to "https://www.twitch.tv/popout/robenkleene/chat?popout=popout_chat"
 tell application "System Events"
-	if application process "Safari Technology Preview" exists then
+	if exists (processes where name is "Safari Technology Preview") then
 		tell application "Safari Technology Preview"
 			open location theURL
 		end tell
