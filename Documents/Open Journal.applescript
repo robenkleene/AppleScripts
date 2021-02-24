@@ -1,1 +1,1 @@
-do shell script "open \"$HOME/text/journal/README.md\""
+do shell script "open \"$HOME/text/journal/journal.md\""
