@@ -13,5 +13,6 @@ on do()
 		set theFile to file of document 1
 		set theUnixPath to POSIX path of theFile
 	end tell
-	do shell script "~/.bin/backup_file " & the quoted form of the theUnixPath
+	set theResult to do shell script "~/.bin/backup_file " & the quoted form of the theUnixPath
+	display notification theResult with title "Archive File"
 end do
