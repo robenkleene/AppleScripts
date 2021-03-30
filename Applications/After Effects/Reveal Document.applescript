@@ -1,3 +1,3 @@
-tell application "Adobe After Effects 2020"
+tell application "Adobe After Effects 2021"
 	DoScript "app.project.file.parent.execute()"
 end tell
