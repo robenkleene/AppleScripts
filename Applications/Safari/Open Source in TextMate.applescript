@@ -12,7 +12,7 @@ on openSourceInTextMate()
 	set theCommand to "/usr/local/bin/mate -a"
 	if application "Safari Technology Preview" is frontmost then
 		tell application "Safari Technology Preview"
-			set theSource to source of document 1
+			set theSource to |source| of document 1
 		end tell
 	else
 		tell application "Safari"

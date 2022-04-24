@@ -1,5 +1,5 @@
 try
-	openSourceInTextMate()
+	openMarkdownNote()
 on error errMsg number errNum
 	if errNum is not equal to -128 then
 		activate -- This prevents a beep when scripts are run from LaunchBar but it also makes the script run slower from the Script Menu
@@ -8,20 +8,18 @@ on error errMsg number errNum
 	end if
 end try
 
-on openSourceInTextMate()
-	set theCommand to "/usr/local/bin/bbedit"
+on openMarkdownNote()
 	if application "Safari Technology Preview" is frontmost then
 		tell application "Safari Technology Preview"
-			set theSource to |source| of document 1
+			set theTitle to name of front document as string
+			set theURL to URL of front document as string
 		end tell
 	else
 		tell application "Safari"
-			set theSource to source of document 1
+			set theTitle to name of front document as string
+			set theURL to URL of front document as string
 		end tell
 	end if
-	-- do shell script "echo " & the quoted form of theSource & " | " & theCommand
-	set theOldClipboard to the clipboard
-	set the clipboard to theSource
-	do shell script "/usr/bin/pbpaste" & " | " & theCommand
-	set the clipboard to theOldClipboard
-end openSourceInTextMate
+	set theLink to "[" & theTitle & "]" & "(" & theURL & ")"
+	open location "ia-writer://new?path=/Locations/Notes/Links/" & theTitle & ".md&text=" & theLink
+end openMarkdownNote
