@@ -21,5 +21,9 @@ on openMarkdownNote()
 		end tell
 	end if
 	set theLink to "[" & theTitle & "]" & "(" & theURL & ")"
+	set thePathComponent to theTitle & ".md&text=" & theLink
+	-- set theEncodedPathComponent to do shell script ¬
+	"perl -MURI::Escape -lne 'print uri_escape($_)' <<<" & quoted form of (thePathComponent)
+	-- open location "ia-writer://new?path=/Locations/Notes/Links/" & theEncodedPathComponent
 	open location "ia-writer://new?path=/Locations/Notes/Links/" & theTitle & ".md&text=" & theLink
 end openMarkdownNote
