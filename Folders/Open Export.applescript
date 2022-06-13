@@ -1,1 +1,1 @@
-do shell script "open ~/Temp/Export/"
+do shell script "open ~/Temp/Exports/"
