@@ -20,10 +20,6 @@ on openMarkdownNote()
 			set theURL to URL of front document as string
 		end tell
 	end if
-	set theLink to "[" & theTitle & "]" & "(" & theURL & ")"
-	set thePathComponent to theTitle & ".md&text=" & theLink
-	-- set theEncodedPathComponent to do shell script ¬
-	"perl -MURI::Escape -lne 'print uri_escape($_)' <<<" & quoted form of (thePathComponent)
-	-- open location "ia-writer://new?path=/Locations/Notes/Links/" & theEncodedPathComponent
-	open location "ia-writer://new?path=/Locations/Notes/Bucket/" & theTitle & ".md&text=" & theLink
+	open location "shortcuts://run-shortcut?name=Add to Bucket&input=text&text=" & theTitle & "
+" & theURL
 end openMarkdownNote
