@@ -20,6 +20,8 @@ on openMarkdownNote()
 			set theURL to URL of front document as string
 		end tell
 	end if
-	open location "shortcuts://run-shortcut?name=Add to Bucket&input=text&text=" & theTitle & "
+	set theInput to theTitle & "
 " & theURL
+	-- open location "shortcuts://run-shortcut?name=Add to Bucket&input=text&text=" & theInput
+	tell application "Shortcuts Events" to run the shortcut named "Add to Bucket" with input theInput
 end openMarkdownNote
