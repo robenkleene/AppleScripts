@@ -6,6 +6,7 @@ DESTINATION = ${HOME}/Library/Scripts
 DEST_EXT = scpt
 
 install: symlink compile
+sync: delete compile
 
 symlink:
 	destination="$(DESTINATION)/Applications/Safari Technology Preview"; \
@@ -13,13 +14,10 @@ symlink:
 	source="$(DESTINATION)/Applications/Safari"; \
 	mkdir -p "$$source"; \
 	ln -s "$$source" "$$destination"; \
-	fi; \
-	destination="$(DESTINATION)/Applications/Code - Insiders"; \
-	if [ ! -e "$$destination" ]; then \
-	source="$(DESTINATION)/Applications/Code"; \
-	mkdir -p "$$source"; \
-	ln -s "$$source" "$$destination"; \
 	fi
+
+delete:
+	find "$(DESTINATION)" -name "*.scpt" -type f -delete
 
 compile:
 	@find . -type f -name '*.$(SOURCE_EXT)' -print0 |\
