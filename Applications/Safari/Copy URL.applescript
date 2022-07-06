@@ -11,12 +11,12 @@ end try
 on doIt()
 	if application "Safari Technology Preview" is frontmost then
 		tell application "Safari Technology Preview"
-			set theTitle to name of front document as string
+			set theURL to URL of front document as string
 		end tell
 	else
 		tell application "Safari"
-			set theTitle to name of front document as string
+			set theURL to URL of front document as string
 		end tell
 	end if
-	set the clipboard to theTitle
+	set the clipboard to theURL
 end doIt
