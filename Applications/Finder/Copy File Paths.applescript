@@ -17,11 +17,11 @@ on copyFilePaths()
 		else
 			repeat with theAlias in theSelection
 				set thePath to POSIX path of theAlias
-				set thePath to the quoted form of thePath
 				if thePaths as string is equal to "" then
 					set thePaths to thePath
 				else
-					set thePaths to thePaths & " " & thePath
+					set thePaths to thePaths & "
+" & thePath
 				end if
 			end repeat
 		end if

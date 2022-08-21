@@ -11,13 +11,14 @@ end try
 on openInTerminal()
 	set thePath to my getThePath()
 	tell application "System Events"
-		
 		if exists (processes where name is "Terminal") then
 			tell application "Terminal"
 				set theWindow to do script ""
 				do script "cd " & quoted form of thePath in theWindow
 				activate
 			end tell
+		else if exists (processes where name is "kitty") then
+			tell application "kitty" to open thePath
 		else if exists (processes where name is "iTerm2") then
 			tell application "iTerm"
 				set theWindow to (create window with default profile)
@@ -35,7 +36,7 @@ end openInTerminal
 on getThePath()
 	try
 		tell application "Finder"
-			set theFolderAlias to target of front window as alias
+			set theFolderAlias to target of front window as alias as string
 			set theFolderPath to POSIX path of theFolderAlias
 		end tell
 	on error

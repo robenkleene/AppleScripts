@@ -9,7 +9,18 @@ on error errMsg number errNum
 end try
 
 on copyFilePaths()
-	-- tell application "Finder" to set theLocation to target of window 1
-	tell application "Finder" to set theLocation to insertion location as alias
-	tell application "kitty" to open theLocation
+	set thePath to my getThePath()
+	tell application "kitty" to open thePath
 end copyFilePaths
+
+on getThePath()
+	try
+		tell application "Finder"
+			set theFolderAlias to target of front window as alias as string
+			set theFolderPath to POSIX path of theFolderAlias
+		end tell
+	on error
+		set theFolderPath to "~"
+	end try
+	return theFolderPath
+end getThePath
