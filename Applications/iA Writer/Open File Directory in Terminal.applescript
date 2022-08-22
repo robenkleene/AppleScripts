@@ -17,6 +17,8 @@ on openInTerminal()
 				do script "cd " & quoted form of thePath in theWindow
 				activate
 			end tell
+		else if exists (processes where name is "kitty") then
+			tell application "kitty" to open thePath
 		else if exists (processes where name is "iTerm2") then
 			tell application "iTerm"
 				set theWindow to (create window with default profile)
