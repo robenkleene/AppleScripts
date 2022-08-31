@@ -9,7 +9,7 @@ on error errMsg number errNum
 end try
 
 on makeNewFile()
-	set theNewFileScript to "~/.bin/file_new -r"
+	set theNewFileScript to "~/.bin/file_new -p -r"
 	tell application "Finder"
 		try
 			set the theFolder to (folder of the front window) as alias
@@ -20,7 +20,20 @@ on makeNewFile()
 		set theUnixPath to POSIX path of theFolder
 		set theNewFilePath to do shell script theNewFileScript & " \"" & theUnixPath & "\""
 		
-		set theNewFilePath to POSIX file theNewFilePath as string
-		reveal theNewFilePath
+		try
+			set theFileDescriptor to open for access theNewFilePath with write permission
+			set eof of theFileDescriptor to 0
+			
+			set theImage to the clipboard as «class PNGf»
+			write theImage to theFileDescriptor
+			close access theFileDescriptor
+			
+			set theNewFilePath to theFile as string
+			reveal theNewFilePath
+		on error
+			try
+				close access theNewFilePath
+			end try
+		end try
 	end tell
 end makeNewFile
