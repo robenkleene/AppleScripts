@@ -1,4 +1,4 @@
-tell application "System Preferences"
+tell application "System Settings"
 	activate
 	set the current pane to pane id "com.apple.preference.sidecar"
 	get the name of every anchor of pane id "com.apple.preference.sidecar"

@@ -1,3 +1,3 @@
-tell application "Adobe After Effects 2022"
-	DoScript "app.project.file.parent.execute()"
+tell application "Adobe After Effects Render Engine 2023"
+	«event miscdosc» "app.project.file.parent.execute()"
 end tell
