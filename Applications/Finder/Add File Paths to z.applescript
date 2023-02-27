@@ -13,14 +13,13 @@ on copyFilePaths()
 		set theSelection to get selection as alias list
 		set thePaths to ""
 		if theSelection is {} then
-			set thePaths to POSIX path of (target of front window as alias)
+			set thePath to POSIX path of (target of front window as alias)
+			do shell script "~/.bin/z_add " & the quoted form of thePath
 		else
 			repeat with theAlias in theSelection
 				set thePath to POSIX path of theAlias
 				do shell script "~/.bin/z_add " & the quoted form of thePath
 			end repeat
 		end if
-		
-		set the clipboard to thePaths
 	end tell
 end copyFilePaths
