@@ -5,19 +5,10 @@ SOURCE_EXT = applescript
 DESTINATION = ${HOME}/Library/Scripts
 DEST_EXT = scpt
 
-install: symlink compile
 sync: delete compile
 
-symlink:
-	destination="$(DESTINATION)/Applications/Safari Technology Preview"; \
-	if [ ! -e "$$destination" ]; then \
-	source="$(DESTINATION)/Applications/Safari"; \
-	mkdir -p "$$source"; \
-	ln -s "$$source" "$$destination"; \
-	fi
-
 delete:
-	find "$(DESTINATION)" -name "*.scpt" -type f -delete
+	@find "$(DESTINATION)" -name "*.scpt" -type f -delete
 
 compile:
 	@find . -type f -name '*.$(SOURCE_EXT)' -print0 |\
@@ -42,7 +33,3 @@ decompile:
 		osadecompile "$$file" > "$$destination"; \
 		sed -i '' -e :a -e '/^\n*$$/{$$d;N;ba' -e '}' "$$destination"; \
 		done
-
-remove_trailing_lines:
-	git ls-files "*.applescript" -z |\
-		xargs -n 1 -0 sed -i '' -e :a -e '/^\n*$$/{$$d;N;ba' -e '}'
