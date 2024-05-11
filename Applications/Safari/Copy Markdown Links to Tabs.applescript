@@ -9,17 +9,10 @@ on error errMsg number errNum
 end try
 
 on copyMarkdownLinks()
-	if application "Safari Technology Preview" is frontmost then
-		tell application "Safari Technology Preview"
-			set theTitles to the name of every tab of window 1
-			set theURLs to the URL of every tab of window 1
-		end tell
-	else
-		tell application "Safari"
-			set theTitles to the name of every tab of window 1
-			set theURLs to the URL of every tab of window 1
-		end tell
-	end if
+        tell application "Safari"
+                set theTitles to the name of every tab of window 1
+                set theURLs to the URL of every tab of window 1
+        end tell
 	set theResult to ""
 	repeat with theIndex from 1 to count of theURLs
 		set theTitle to item theIndex of theTitles

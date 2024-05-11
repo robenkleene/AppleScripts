@@ -9,13 +9,7 @@ on error errMsg number errNum
 end try
 
 on getSource()
-	if application "Safari Technology Preview" is frontmost then
-		tell application "Safari Technology Preview"
-			return |source| of document 1
-		end tell
-	else
-		tell application "Safari"
-			return source of document 1
-		end tell
-	end if
+        tell application "Safari"
+                return source of document 1
+        end tell
 end getSource

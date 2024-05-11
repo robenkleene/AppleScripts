@@ -9,14 +9,8 @@ on error errMsg number errNum
 end try
 
 on doIt()
-	if application "Safari Technology Preview" is frontmost then
-		tell application "Safari Technology Preview"
-			set theURL to URL of front document as string
-		end tell
-	else
-		tell application "Safari"
-			set theURL to URL of front document as string
-		end tell
-	end if
+        tell application "Safari"
+                set theURL to URL of front document as string
+        end tell
 	set the clipboard to theURL
 end doIt
