@@ -9,7 +9,7 @@ on error errMsg number errNum
 end try
 
 on getSource()
-        tell application "Safari"
-                return source of document 1
-        end tell
+	tell application "Safari"
+		return source of document 1
+	end tell
 end getSource

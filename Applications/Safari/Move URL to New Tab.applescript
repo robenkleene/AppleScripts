@@ -9,8 +9,8 @@ on error errMsg number errNum
 end try
 
 on switchToNewTab()
-        tell application "Safari"
-                set theURL to URL of current tab of window 1
-                tell window 1 to make new tab with properties {URL:theURL}
-        end tell
+	tell application "Safari"
+		set theURL to URL of current tab of window 1
+		tell window 1 to make new tab with properties {URL:theURL}
+	end tell
 end switchToNewTab

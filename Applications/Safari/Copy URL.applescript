@@ -9,8 +9,8 @@ on error errMsg number errNum
 end try
 
 on doIt()
-        tell application "Safari"
-                set theURL to URL of front document as string
-        end tell
+	tell application "Safari"
+		set theURL to URL of front document as string
+	end tell
 	set the clipboard to theURL
 end doIt

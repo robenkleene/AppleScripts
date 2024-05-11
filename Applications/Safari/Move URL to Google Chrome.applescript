@@ -8,11 +8,11 @@ on error errMsg number errNum
 end try
 
 on openURLInBrave()
-        tell application "Safari"
-                set theTab to current tab of window 1
-                set theURL to URL of theTab
-                close theTab
-        end tell
+	tell application "Safari"
+		set theTab to current tab of window 1
+		set theURL to URL of theTab
+		close theTab
+	end tell
 	tell application "Google Chrome"
 		make new window
 		open location theURL
