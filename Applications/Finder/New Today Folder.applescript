@@ -16,6 +16,8 @@ on body()
 		else
 			set targetFolder to desktop
 		end if
-		make new folder at targetFolder with properties {name:currentDate}
+		set newFolder to make new folder at targetFolder with properties {name:currentDate}
+		reveal newFolder
+		activate
 	end tell
 end body
